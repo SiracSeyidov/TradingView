@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct TradingViewApp: App {
+    @State private var selectedTab: Int = 2
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView(pair: "GBPUSD", pairIndex: 1, selectedTab: $selectedTab, showSplash: true)
         }
     }
 }
